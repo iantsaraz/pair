@@ -1,7 +1,7 @@
-def half_pyramide (number)
+def full_pyramide (number)
 	(number+1).times do |n|
-		
-	puts("#" *n)
+	print " "* (number - n)	
+	puts("#" *((2 *n+1)))
    n =1
    n+=1 
 
@@ -20,7 +20,7 @@ end
 
 def perform
 	number = ask_number
-	half_pyramide (number)
+	full_pyramide (number)
 end
 
 perform
