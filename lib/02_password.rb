@@ -1,30 +1,36 @@
+
 def sign_up
 	puts "sign up"
-	print ">"	
-	sign_up = gets.chomp
-end
-def login
-	puts "entrez votre password"
-	print ">"
-	password = gets.chomp
-	return password
 	
-end
-def condition(password)
-    x="dada"
-    while (x != password)
-	puts "error"
 	puts "entrez votre password"
 	print ">"
-	password = gets.chomp  	
-    end
-puts "password accepted"
+	x = gets.chomp
+	return x
 end
+   
+
+def login(x)
+	puts"login"
+	puts "entrez votre password"
+	print ">"
+	x1 = gets.chomp
+
+	begin
+		puts "WRONG PASSWORD"
+		puts "entrez votre mot de passe"
+		x1 = gets.chomp
+		
+	end while x != x1
+puts "WELCOME TO YOUR ACCOUNT"
+		
+end
+    
+# end
 
 def perform
-	sign_up
-	password = login
-	condition(password)
+
+    x = sign_up
+    login(x)
 end
 
-perform
+perform	
